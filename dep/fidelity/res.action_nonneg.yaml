@@ -1,0 +1,17 @@
+# Statement-fidelity mapping (DEP&CC 2.0, Chapter 19.5).
+result: res.action_nonneg
+formal: IGTP.discreteAction_nonneg
+quantifier_prefix: "A o A γ A ts (domains: ObjectiveComponents M, ℝ → M, List ℝ)"
+audit: "quantifier order verified; ts may be empty (degenerate case: sum is 0, conclusion holds)"
+mapping:
+  - prose: "the discrete action over a finite time list"
+    formal: "discreteAction o γ ts = (ts.map fun t => E + V + K).sum"
+    audit: "matches; the continuous action is NOT formalized (see conj.continuous_geodesic)"
+  - prose: "whenever V and K are nonnegative componentwise"
+    formal: "o.smt_nonneg, o.dl_nonneg (structure fields)"
+    audit: "matches; nonnegativity is a construction obligation, not an axiom"
+  - prose: "nonnegative"
+    formal: "0 ≤ discreteAction o γ ts"
+    audit: "matches"
+signed_by: compilecomp
+review_date: "2026-11-07"

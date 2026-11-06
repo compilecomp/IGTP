@@ -1,0 +1,17 @@
+# Statement-fidelity mapping (DEP&CC 2.0, Chapter 19.5).
+result: res.energy_nonneg
+formal: IGTP.geodesicEnergy_nonneg
+quantifier_prefix: "A γ A v A t (domains: ℝ → M, PathVelocity γ, ℝ)"
+audit: "quantifier order verified: the Lean statement binds gamma, v, t universally before the conclusion"
+mapping:
+  - prose: "the geodesic energy density"
+    formal: "geodesicEnergy γ v t = (1/2) * metric (γ t) (v t) (v t)"
+    audit: "matches; unit-velocity convention stated in doc/Manifold.md"
+  - prose: "nonnegative"
+    formal: "0 ≤ geodesicEnergy γ v t"
+    audit: "matches; conclusion is the Lean ≤ on ℝ"
+  - prose: "under diagonal positive semidefiniteness (H1)"
+    formal: "MetricManifold.metric_nonneg (class field)"
+    audit: "matches; H1 is a class hypothesis, present in the statement's instance context"
+signed_by: compilecomp
+review_date: "2026-11-07"

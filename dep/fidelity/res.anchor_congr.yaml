@@ -1,0 +1,14 @@
+# Statement-fidelity mapping (DEP&CC 2.0, Chapter 19.5).
+result: res.anchor_congr
+formal: IGTP.satisfiesAnchor_congr
+quantifier_prefix: "A γ A σ A a"
+audit: "quantifier order verified"
+mapping:
+  - prose: "paths agreeing at the anchor time"
+    formal: "h : σ a.1 = γ a.1"
+    audit: "matches; agreement only at a.1 is required, exactly as the prose says"
+  - prose: "anchor satisfaction transfers"
+    formal: "SatisfiesAnchor γ a → SatisfiesAnchor σ a"
+    audit: "matches"
+signed_by: compilecomp
+review_date: "2026-11-07"

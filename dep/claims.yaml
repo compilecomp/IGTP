@@ -1,0 +1,304 @@
+# Claims ledger (DEP&CC 2.0, Chapters 5.4, 5.5, 23.7, 27; Law 12: no claim inflation).
+# Status vocabularies are closed sets; dep_lint enforces membership and
+# contamination. Claim statuses used here: machine-checked, conjectural,
+# empirical. Completeness statuses: complete, placeholder.
+
+results:
+  - id: res.energy_nonneg
+    node: IGTP.geodesicEnergy_nonneg
+    type: theorem
+    statement: "For every path γ and velocity assignment v, the geodesic energy density E(γ, v, t) = (1/2) g_{γ(t)}(v(t), v(t)) is nonnegative."
+    claim_status: machine-checked
+    completeness: complete
+    class: DEP-0
+    hyp: [H1]
+    quantifiers: "A A A (γ, v, t)"
+    depends: []
+    axioms: [propext, Classical.choice, Quot.sound]
+    constants: []
+    interchange: []
+    witness: IGTP.instMetricManifoldUnit
+    sharpness: "H1: sharp (battery probes dg.energy with negative u: g(v,v) = u^2 < 0 fails; conclusion fails)"
+    degeneracy: dep/out/degeneracy/IGTP.geodesicEnergy_nonneg.json
+    fidelity: dep/fidelity/res.energy_nonneg.yaml
+    evidence: "IGTP/Manifold.lean; axiom dump dep/out/axioms/IGTP.geodesicEnergy_nonneg.json"
+    gap: none
+    owner: compilecomp
+    review: {date: "2026-11-07", reviewer: compilecomp, cold_read: "self-review; independent cold read scheduled per dep/manifest.yaml"}
+
+  - id: res.action_nonneg
+    node: IGTP.discreteAction_nonneg
+    type: theorem
+    statement: "The discrete action S(γ, ts), the sum over a finite time list of E + V + K, is nonnegative whenever V and K are nonnegative componentwise."
+    claim_status: machine-checked
+    completeness: complete
+    class: DEP-0
+    hyp: [H1, H2]
+    quantifiers: "A A A (o, γ, ts)"
+    depends: [res.energy_nonneg]
+    axioms: [propext, Classical.choice, Quot.sound]
+    constants: []
+    interchange: []
+    witness: IGTP.unitObjective
+    sharpness: "H1: sharp (battery dg.action.14); H2: sharp (battery dg.action.15)"
+    degeneracy: dep/out/degeneracy/IGTP.discreteAction_nonneg.json
+    fidelity: dep/fidelity/res.action_nonneg.yaml
+    evidence: "IGTP/Objective.lean; axiom dump dep/out/axioms/IGTP.discreteAction_nonneg.json"
+    gap: none
+    owner: compilecomp
+    review: {date: "2026-11-07", reviewer: compilecomp, cold_read: "self-review; independent cold read scheduled per dep/manifest.yaml"}
+
+  - id: res.ricci_const
+    node: IGTP.isRicciFlow_const
+    type: theorem
+    statement: "A time-constant metric family satisfies the Ricci-flow equation ∂_t g = -2 R if and only if the declared Ricci data vanishes identically."
+    claim_status: machine-checked
+    completeness: complete
+    class: DEP-0
+    hyp: []
+    quantifiers: "A (g) then A (p, u, v) in each direction"
+    depends: []
+    axioms: [propext, Classical.choice, Quot.sound]
+    constants: []
+    interchange: []
+    witness: "zero family on Unit (example after isRicciFlow_const in IGTP/RicciFlow.lean)"
+    sharpness: "no hypotheses; statement is an iff with both directions proved"
+    degeneracy: dep/out/degeneracy/IGTP.isRicciFlow_const.json
+    fidelity: dep/fidelity/res.ricci_const.yaml
+    evidence: "IGTP/RicciFlow.lean; axiom dump dep/out/axioms/IGTP.isRicciFlow_const.json"
+    gap: none
+    owner: compilecomp
+    review: {date: "2026-11-07", reviewer: compilecomp, cold_read: "self-review; independent cold read scheduled per dep/manifest.yaml"}
+
+  - id: res.descent_strict
+    node: IGTP.quadratic_descent_strict
+    type: theorem
+    statement: "For c > 0, f > 0, η > 0 with η c ≤ f, and θ ≠ 0, the natural-gradient update θ' = θ - η (c θ)/f strictly decreases the quadratic objective S(θ) = (c/2) θ²."
+    claim_status: machine-checked
+    completeness: complete
+    class: DEP-0
+    hyp: [H1, H2, H3, H4, H5]
+    quantifiers: "A A A A A (c, f, η, θ; all universally quantified with the stated domains)"
+    depends: []
+    axioms: [propext, Classical.choice, Quot.sound]
+    constants: [const.eta, const.c, const.f]
+    interchange: []
+    witness: "exact rational instance c = 1, f = 1, η = 1/2, θ = 1 (example in IGTP/QuadraticModel.lean)"
+    sharpness: "H1: sharp (c = 0 gives equality, battery dg.quadratic_descent_strict); H2: sharp (f = 0 ill-posed); H3: sharp (η = 0 gives equality); H4: sharp (η c > 2 f increases S, battery sharp probe); H5: sharp (θ = 0 gives equality)"
+    degeneracy: dep/out/degeneracy/IGTP.quadratic_descent_strict.json
+    fidelity: dep/fidelity/res.descent_strict.yaml
+    evidence: "IGTP/QuadraticModel.lean; axiom dump dep/out/axioms/IGTP.quadratic_descent_strict.json"
+    gap: none
+    owner: compilecomp
+    review: {date: "2026-11-07", reviewer: compilecomp, cold_read: "self-review; independent cold read scheduled per dep/manifest.yaml"}
+
+  - id: res.descent_le
+    node: IGTP.quadratic_descent_le
+    type: theorem
+    statement: "For c > 0, f > 0, η ≥ 0 with η c ≤ f, the update never increases the quadratic objective, for every θ."
+    claim_status: machine-checked
+    completeness: complete
+    class: DEP-0
+    hyp: [H1, H2, H3, H4]
+    quantifiers: "A A A A (c, f, η, θ)"
+    depends: []
+    axioms: [propext, Classical.choice, Quot.sound]
+    constants: [const.eta, const.c, const.f]
+    interchange: []
+    witness: "θ = 0 instance: equality holds (battery dg.quadratic_descent_le.zero)"
+    sharpness: "H4: sharp (η c > 2 f increases S); H3: sharp (η < 0 increases S for θ ≠ 0)"
+    degeneracy: dep/out/degeneracy/IGTP.quadratic_descent_le.json
+    fidelity: dep/fidelity/res.descent_le.yaml
+    evidence: "IGTP/QuadraticModel.lean; axiom dump dep/out/axioms/IGTP.quadratic_descent_le.json"
+    gap: none
+    owner: compilecomp
+    review: {date: "2026-11-07", reviewer: compilecomp, cold_read: "self-review; independent cold read scheduled per dep/manifest.yaml"}
+
+  - id: res.descent_step
+    node: IGTP.naturalGradientStep_descent_strict
+    type: theorem
+    statement: "The strict descent theorem transfers to the IGTP.naturalGradientStep update with the model gradient ∇S(θ) = c θ."
+    claim_status: machine-checked
+    completeness: complete
+    class: DEP-0
+    hyp: [H1, H2, H3, H4, H5]
+    quantifiers: "A A A A A"
+    depends: [res.descent_strict]
+    axioms: [propext, Classical.choice, Quot.sound]
+    constants: [const.eta, const.c, const.f]
+    interchange: []
+    witness: "battery probe dg.natural_gradient.step_def"
+    sharpness: "inherits res.descent_strict"
+    degeneracy: dep/out/degeneracy/IGTP.naturalGradientStep_descent_strict.json
+    fidelity: dep/fidelity/res.descent_step.yaml
+    evidence: "IGTP/QuadraticModel.lean; axiom dump dep/out/axioms/IGTP.naturalGradientStep_descent_strict.json"
+    gap: none
+    owner: compilecomp
+    review: {date: "2026-11-07", reviewer: compilecomp, cold_read: "self-review; independent cold read scheduled per dep/manifest.yaml"}
+
+  - id: res.anchors_exist
+    node: IGTP.exists_path_satisfies_anchors
+    type: theorem
+    statement: "Every consistent, nonempty-universe anchor set is satisfied by some path."
+    claim_status: machine-checked
+    completeness: complete
+    class: DEP-0
+    hyp: [H1, H2]
+    quantifiers: "A (A) E (γ): for every consistent anchor set there exists a satisfying path"
+    depends: []
+    axioms: [propext, Classical.choice, Quot.sound]
+    constants: []
+    interchange: []
+    witness: "singleton anchor set witness (example in IGTP/Boundary.lean); battery dg.anchors"
+    sharpness: "H1: sharp (conflicting anchors admit no satisfying path, battery dg.anchors.04/06); H2: sharp (empty universe admits no path)"
+    degeneracy: dep/out/degeneracy/IGTP.exists_path_satisfies_anchors.json
+    fidelity: dep/fidelity/res.anchors_exist.yaml
+    evidence: "IGTP/Boundary.lean; axiom dump dep/out/axioms/IGTP.exists_path_satisfies_anchors.json"
+    gap: none
+    owner: compilecomp
+    review: {date: "2026-11-07", reviewer: compilecomp, cold_read: "self-review; independent cold read scheduled per dep/manifest.yaml"}
+
+  - id: res.anchor_congr
+    node: IGTP.satisfiesAnchor_congr
+    type: theorem
+    statement: "Anchor satisfaction is invariant under replacing a path by one agreeing with it at the anchor time."
+    claim_status: machine-checked
+    completeness: complete
+    class: DEP-0
+    hyp: [H1, H2]
+    quantifiers: "A A (γ, σ) A (a)"
+    depends: []
+    axioms: [propext, Classical.choice, Quot.sound]
+    constants: []
+    interchange: []
+    witness: "battery dg.congr.00"
+    sharpness: "H1: sharp (disagreeing paths break the transfer, battery dg.congr.12); H2: sharp (unanchored base path gives no conclusion)"
+    degeneracy: dep/out/degeneracy/IGTP.satisfiesAnchor_congr.json
+    fidelity: dep/fidelity/res.anchor_congr.yaml
+    evidence: "IGTP/Boundary.lean; axiom dump dep/out/axioms/IGTP.satisfiesAnchor_congr.json"
+    gap: none
+    owner: compilecomp
+    review: {date: "2026-11-07", reviewer: compilecomp, cold_read: "self-review; independent cold read scheduled per dep/manifest.yaml"}
+
+conjectures:
+  - id: conj.continuous_geodesic
+    statement: "On a smooth realization of the IGTP manifold, minimizers of a continuous action functional built from E + V + K follow geodesics of the semantic metric."
+    claim_status: conjectural
+    completeness: placeholder
+    class: DEP-2
+    depends: []
+    evidence: "none; design target, see doc/DesignGoals.md"
+    gap: none
+    owner: compilecomp
+    notes: "design target translated from the project goals; no formal statement exists yet in this repository; must never be depended on by a complete node"
+  - id: conj.search_complexity
+    statement: "Search cost on the smoothed manifold is polynomial in the size of the problem instance."
+    claim_status: conjectural
+    completeness: placeholder
+    class: DEP-2
+    depends: []
+    evidence: "none; design target, see doc/DesignGoals.md"
+    gap: none
+    owner: compilecomp
+    notes: "no upper or lower bound is proved; the discrete engine is polynomial in graph size by Dijkstra, which does not establish this claim for proof search"
+  - id: conj.kolmogorov_minimality
+    statement: "Among searched candidate paths, minimizing the action selects a proof path of minimal algorithmic complexity."
+    claim_status: conjectural
+    completeness: placeholder
+    class: DEP-2
+    depends: []
+    evidence: "none; design target, see doc/DesignGoals.md"
+    gap: none
+    owner: compilecomp
+    notes: "Kolmogorov complexity is uncomputable; K is a declared nonnegative proxy (IGTP/Objective.lean)"
+  - id: conj.ricci_pruning
+    statement: "Ricci-flow preprocessing reduces the explored search space relative to unsmoothed syntactic search."
+    claim_status: conjectural
+    completeness: placeholder
+    class: DEP-2
+    depends: []
+    evidence: "none; design target, see doc/DesignGoals.md"
+    gap: none
+    owner: compilecomp
+    notes: "no experiment compares smoothed and unsmoothed search yet"
+  - id: conj.multidim_descent
+    statement: "One-step natural-gradient descent decreases the objective in multidimensional state spaces under Lipschitz and convexity conditions relative to the Fisher metric."
+    claim_status: conjectural
+    completeness: placeholder
+    class: DEP-2
+    depends: []
+    evidence: "none; design target, see doc/DesignGoals.md"
+    gap: none
+    owner: compilecomp
+    notes: "proved here only for the one-dimensional quadratic model (res.descent_strict, res.descent_le)"
+  - id: conj.curvature_discovery
+    statement: "Curvature defects of the manifold indicate locations where theorems are missing (structure-guided conjecture generation)."
+    claim_status: conjectural
+    completeness: placeholder
+    class: DEP-2
+    depends: []
+    evidence: "none; design target, see doc/DesignGoals.md"
+    gap: none
+    owner: compilecomp
+    notes: "long-term design target; no formal or empirical support exists in this repository"
+
+empirical:
+  - id: emp.resolution_engine
+    statement: "The propositional resolution engine decides entailment on the test battery, and every produced derivation passes the clause-level soundness criterion."
+    claim_status: empirical
+    completeness: complete
+    class: DEP-1
+    depends: []
+    gap: none
+    owner: compilecomp
+    evidence: "bridges/tests/test_resolution.py; CI run"
+    notes: "exploratory; no pre-registration; soundness of the engine itself is not formally verified"
+  - id: emp.smt_crosscheck
+    statement: "z3 at the pinned version agrees with the resolution engine on every task of the reference pipeline."
+    claim_status: empirical
+    completeness: complete
+    class: DEP-1
+    depends: []
+    gap: none
+    owner: compilecomp
+    evidence: "bridges/tests/test_smt_bridge.py; experiments/results/demo_golden.json"
+    notes: "z3 verdicts are a TCB cross-check, never the sole justification of a claim"
+  - id: emp.search_energy
+    statement: "Geodesic search returns the minimum combined-energy path on the demo manifold, matching hand-computed exact optima."
+    claim_status: empirical
+    completeness: complete
+    class: DEP-1
+    depends: []
+    gap: none
+    owner: compilecomp
+    evidence: "bridges/tests/test_search.py; experiments/results/demo_golden.json"
+    notes: "exact rational arithmetic; no floating point enters the energies"
+  - id: emp.pipeline_determinism
+    statement: "Identical pipeline runs produce byte-identical records except wall-clock timings, which are informational."
+    claim_status: empirical
+    completeness: complete
+    class: DEP-1
+    depends: []
+    gap: none
+    owner: compilecomp
+    evidence: "bridges/tests/test_determinism.py; experiments/code/run_demo.py golden comparison"
+
+claims:
+  - id: claim.readme.formal_core
+    text: "The formal core is machine-checked: every declaration is proved with zero admitted tokens and the axiom ledger is extracted in CI."
+    location: "README.md: scope section"
+    maps_to: [res.energy_nonneg, res.action_nonneg, res.ricci_const, res.descent_strict, res.descent_le, res.descent_step, res.anchors_exist, res.anchor_congr]
+    status_inherited: machine-checked
+    verdict: pass
+  - id: claim.readme.bridges
+    text: "The reference engine components are empirical, supported by the test suite and the reproducible demo artifact."
+    location: "README.md: scope section"
+    maps_to: [emp.resolution_engine, emp.smt_crosscheck, emp.search_energy, emp.pipeline_determinism]
+    status_inherited: empirical
+    verdict: pass
+  - id: claim.readme.targets
+    text: "The design goals of the project are recorded as design targets with status conjectural; no complexity or minimality claim is made."
+    location: "README.md: design targets section; doc/DesignGoals.md"
+    maps_to: [conj.continuous_geodesic, conj.search_complexity, conj.kolmogorov_minimality, conj.ricci_pruning, conj.multidim_descent, conj.curvature_discovery]
+    status_inherited: conjectural
+    verdict: pass

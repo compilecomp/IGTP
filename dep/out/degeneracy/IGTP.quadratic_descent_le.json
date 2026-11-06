@@ -1,0 +1,589 @@
+{
+  "node": "IGTP.quadratic_descent_le",
+  "hypothesis_count": 4,
+  "quota": 24,
+  "probes": [
+    {
+      "id": "dg.quadratic_descent_le.001",
+      "instantiation": "c=1, f=1, eta=0, theta=-1: S=1/2, S'=1/2",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.002",
+      "instantiation": "c=1, f=1, eta=0, theta=0: S=0, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.003",
+      "instantiation": "c=1, f=1, eta=0, theta=1: S=1/2, S'=1/2",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.004",
+      "instantiation": "c=1, f=1, eta=0, theta=3: S=9/2, S'=9/2",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.005",
+      "instantiation": "c=1, f=1, eta=1/2, theta=-1: S=1/2, S'=1/8",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.006",
+      "instantiation": "c=1, f=1, eta=1/2, theta=0: S=0, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.007",
+      "instantiation": "c=1, f=1, eta=1/2, theta=1: S=1/2, S'=1/8",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.008",
+      "instantiation": "c=1, f=1, eta=1/2, theta=3: S=9/2, S'=9/8",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.009",
+      "instantiation": "c=1, f=1, eta=1, theta=-1: S=1/2, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.010",
+      "instantiation": "c=1, f=1, eta=1, theta=0: S=0, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.011",
+      "instantiation": "c=1, f=1, eta=1, theta=1: S=1/2, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.012",
+      "instantiation": "c=1, f=1, eta=1, theta=3: S=9/2, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.013",
+      "instantiation": "c=1, f=1, eta=3/2, theta=-1: S=1/2, S'=1/8",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.quadratic_descent_le.014",
+      "instantiation": "c=1, f=1, eta=3/2, theta=0: S=0, S'=0",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.quadratic_descent_le.015",
+      "instantiation": "c=1, f=1, eta=3/2, theta=1: S=1/2, S'=1/8",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.quadratic_descent_le.016",
+      "instantiation": "c=1, f=1, eta=3/2, theta=3: S=9/2, S'=9/8",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.quadratic_descent_le.017",
+      "instantiation": "c=1, f=1, eta=2, theta=-1: S=1/2, S'=1/2",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.quadratic_descent_le.018",
+      "instantiation": "c=1, f=1, eta=2, theta=0: S=0, S'=0",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.quadratic_descent_le.019",
+      "instantiation": "c=1, f=1, eta=2, theta=1: S=1/2, S'=1/2",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.quadratic_descent_le.020",
+      "instantiation": "c=1, f=1, eta=2, theta=3: S=9/2, S'=9/2",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.quadratic_descent_le.021",
+      "instantiation": "c=1, f=2, eta=0, theta=-1: S=1/2, S'=1/2",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.022",
+      "instantiation": "c=1, f=2, eta=0, theta=0: S=0, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.023",
+      "instantiation": "c=1, f=2, eta=0, theta=1: S=1/2, S'=1/2",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.024",
+      "instantiation": "c=1, f=2, eta=0, theta=3: S=9/2, S'=9/2",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.025",
+      "instantiation": "c=1, f=2, eta=1/2, theta=-1: S=1/2, S'=9/32",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.026",
+      "instantiation": "c=1, f=2, eta=1/2, theta=0: S=0, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.027",
+      "instantiation": "c=1, f=2, eta=1/2, theta=1: S=1/2, S'=9/32",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.028",
+      "instantiation": "c=1, f=2, eta=1/2, theta=3: S=9/2, S'=81/32",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.029",
+      "instantiation": "c=1, f=2, eta=1, theta=-1: S=1/2, S'=1/8",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.030",
+      "instantiation": "c=1, f=2, eta=1, theta=0: S=0, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.031",
+      "instantiation": "c=1, f=2, eta=1, theta=1: S=1/2, S'=1/8",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.032",
+      "instantiation": "c=1, f=2, eta=1, theta=3: S=9/2, S'=9/8",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.033",
+      "instantiation": "c=1, f=2, eta=3/2, theta=-1: S=1/2, S'=1/32",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.034",
+      "instantiation": "c=1, f=2, eta=3/2, theta=0: S=0, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.035",
+      "instantiation": "c=1, f=2, eta=3/2, theta=1: S=1/2, S'=1/32",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.036",
+      "instantiation": "c=1, f=2, eta=3/2, theta=3: S=9/2, S'=9/32",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.037",
+      "instantiation": "c=1, f=2, eta=2, theta=-1: S=1/2, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.038",
+      "instantiation": "c=1, f=2, eta=2, theta=0: S=0, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.039",
+      "instantiation": "c=1, f=2, eta=2, theta=1: S=1/2, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.040",
+      "instantiation": "c=1, f=2, eta=2, theta=3: S=9/2, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.041",
+      "instantiation": "c=1/2, f=1, eta=0, theta=-1: S=1/4, S'=1/4",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.042",
+      "instantiation": "c=1/2, f=1, eta=0, theta=0: S=0, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.043",
+      "instantiation": "c=1/2, f=1, eta=0, theta=1: S=1/4, S'=1/4",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.044",
+      "instantiation": "c=1/2, f=1, eta=0, theta=3: S=9/4, S'=9/4",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.045",
+      "instantiation": "c=1/2, f=1, eta=1/2, theta=-1: S=1/4, S'=9/64",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.046",
+      "instantiation": "c=1/2, f=1, eta=1/2, theta=0: S=0, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.047",
+      "instantiation": "c=1/2, f=1, eta=1/2, theta=1: S=1/4, S'=9/64",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.048",
+      "instantiation": "c=1/2, f=1, eta=1/2, theta=3: S=9/4, S'=81/64",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.049",
+      "instantiation": "c=1/2, f=1, eta=1, theta=-1: S=1/4, S'=1/16",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.050",
+      "instantiation": "c=1/2, f=1, eta=1, theta=0: S=0, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.051",
+      "instantiation": "c=1/2, f=1, eta=1, theta=1: S=1/4, S'=1/16",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.052",
+      "instantiation": "c=1/2, f=1, eta=1, theta=3: S=9/4, S'=9/16",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.053",
+      "instantiation": "c=1/2, f=1, eta=3/2, theta=-1: S=1/4, S'=1/64",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.054",
+      "instantiation": "c=1/2, f=1, eta=3/2, theta=0: S=0, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.055",
+      "instantiation": "c=1/2, f=1, eta=3/2, theta=1: S=1/4, S'=1/64",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.056",
+      "instantiation": "c=1/2, f=1, eta=3/2, theta=3: S=9/4, S'=9/64",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.057",
+      "instantiation": "c=1/2, f=1, eta=2, theta=-1: S=1/4, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.058",
+      "instantiation": "c=1/2, f=1, eta=2, theta=0: S=0, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.059",
+      "instantiation": "c=1/2, f=1, eta=2, theta=1: S=1/4, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.060",
+      "instantiation": "c=1/2, f=1, eta=2, theta=3: S=9/4, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.061",
+      "instantiation": "c=1/2, f=2, eta=0, theta=-1: S=1/4, S'=1/4",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.062",
+      "instantiation": "c=1/2, f=2, eta=0, theta=0: S=0, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.063",
+      "instantiation": "c=1/2, f=2, eta=0, theta=1: S=1/4, S'=1/4",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.064",
+      "instantiation": "c=1/2, f=2, eta=0, theta=3: S=9/4, S'=9/4",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.065",
+      "instantiation": "c=1/2, f=2, eta=1/2, theta=-1: S=1/4, S'=49/256",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.066",
+      "instantiation": "c=1/2, f=2, eta=1/2, theta=0: S=0, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.067",
+      "instantiation": "c=1/2, f=2, eta=1/2, theta=1: S=1/4, S'=49/256",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.068",
+      "instantiation": "c=1/2, f=2, eta=1/2, theta=3: S=9/4, S'=441/256",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.069",
+      "instantiation": "c=1/2, f=2, eta=1, theta=-1: S=1/4, S'=9/64",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.070",
+      "instantiation": "c=1/2, f=2, eta=1, theta=0: S=0, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.071",
+      "instantiation": "c=1/2, f=2, eta=1, theta=1: S=1/4, S'=9/64",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.072",
+      "instantiation": "c=1/2, f=2, eta=1, theta=3: S=9/4, S'=81/64",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.073",
+      "instantiation": "c=1/2, f=2, eta=3/2, theta=-1: S=1/4, S'=25/256",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.074",
+      "instantiation": "c=1/2, f=2, eta=3/2, theta=0: S=0, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.075",
+      "instantiation": "c=1/2, f=2, eta=3/2, theta=1: S=1/4, S'=25/256",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.076",
+      "instantiation": "c=1/2, f=2, eta=3/2, theta=3: S=9/4, S'=225/256",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.077",
+      "instantiation": "c=1/2, f=2, eta=2, theta=-1: S=1/4, S'=1/16",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.078",
+      "instantiation": "c=1/2, f=2, eta=2, theta=0: S=0, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.079",
+      "instantiation": "c=1/2, f=2, eta=2, theta=1: S=1/4, S'=1/16",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.080",
+      "instantiation": "c=1/2, f=2, eta=2, theta=3: S=9/4, S'=9/16",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.quadratic_descent_le.sharp",
+      "instantiation": "step-size violated (eta*c=3 > 2*f=2): c=1, f=1, eta=3, theta=1; S=1/2, S'=2",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: sharpness witness of hstep)"
+    },
+    {
+      "id": "dg.quadratic_descent_le.zero",
+      "instantiation": "theta = 0 (minimizer): S'=S'=0; strict conclusion false, non-strict conclusion true",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    }
+  ],
+  "summary": {
+    "applicable": 82,
+    "executed": 82,
+    "passes": 82,
+    "counterexamples": 0,
+    "na": 0,
+    "quota_met": true
+  }
+}

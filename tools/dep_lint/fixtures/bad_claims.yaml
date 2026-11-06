@@ -1,0 +1,6 @@
+- id: res.bad
+  claim_status: sketched-and-lovely
+  completeness: complete
+- id: res.bad2
+  claim_status: proved
+  completeness: partial

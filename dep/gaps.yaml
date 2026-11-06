@@ -1,0 +1,9 @@
+# Gap register (DEP&CC 2.0, Chapter 23.6; Law 7: no unregistered gaps).
+# Status: EMPTY.
+# Every result in dep/claims.yaml that is claimed complete is fully proved
+# (machine-checked by the Lean kernel, zero admitted tokens). Statements that
+# are not proved are registered as conjectures in dep/claims.yaml with status
+# `conjectural`, not as gaps. A gap entry is required the moment a claimed
+# result has an asserted-but-unjustified inference; it must carry: id, node,
+# missing, blast_radius, owner, ticket, opened, expires, downgrades.
+gaps: []

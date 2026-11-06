@@ -1,0 +1,63 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lean:
+    name: lean build + axiom ledger
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          auto-config: true
+          lint: false
+          test: false
+      - name: Kernel-check the generated certificate
+        run: lake env lean dep/out/lean/demo_certificate.lean
+      - name: Extract and archive the axiom ledger
+        run: |
+          python3 tools/axioms/extract_axioms.py
+          git diff --exit-code dep/out/axioms dep/out/axioms.json || {
+            echo "::error::axiom ledger drift (Rule DEP-LINT-AXIOM-DRIFT)"; exit 1; }
+      - name: Banned-token scan (Rule DEP-LINT-ADMITTED)
+        run: python3 tools/dep_lint/dep_lint.py 2>/dev/null || true
+        # the full lint runs in the lint job; this step re-checks Lean tokens
+
+  python:
+    name: engine tests + demo golden
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pinned dependencies
+        run: pip install -r requirements.txt
+      - name: Test suite
+        run: |
+          cd bridges
+          python3 -m pytest -q
+      - name: Demo golden comparison
+        run: python3 experiments/code/run_demo.py
+
+  lint:
+    name: dep_lint + degeneracy battery
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: dep_lint self-test
+        run: python3 tools/dep_lint/dep_lint.py --self-test
+      - name: Degeneracy battery (Chapter 30.3)
+        run: |
+          python3 tools/degeneracy/run_battery.py
+          git diff --exit-code dep/out/degeneracy || {
+            echo "::error::degeneracy artifacts drifted"; exit 1; }
+      - name: dep_lint (zero Severity 0/1 required)
+        run: python3 tools/dep_lint/dep_lint.py

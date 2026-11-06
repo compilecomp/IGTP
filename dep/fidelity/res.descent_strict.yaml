@@ -1,0 +1,17 @@
+# Statement-fidelity mapping (DEP&CC 2.0, Chapter 19.5).
+result: res.descent_strict
+formal: IGTP.quadratic_descent_strict
+quantifier_prefix: "A c A f A η A θ (domains: ℝ, with 0 < c, 0 < f, 0 < η, η c ≤ f, θ ≠ 0)"
+audit: "quantifier order verified; all five hypotheses are explicit binders in the Lean statement"
+mapping:
+  - prose: "the quadratic objective S(θ) = (c/2) θ²"
+    formal: "(c / 2) * θ ^ 2 and (c / 2) * (θ - η * (c * θ) / f) ^ 2"
+    audit: "matches; the update is written in closed form; the transfer to naturalGradientStep is res.descent_step"
+  - prose: "strictly decreases"
+    formal: "< (strict < on ℝ)"
+    audit: "matches; the non-strict variant is res.descent_le"
+  - prose: "the step-size condition"
+    formal: "hstep : η * c ≤ f"
+    audit: "matches; sharpness recorded in dep/claims.yaml (η c > 2 f increases S)"
+signed_by: compilecomp
+review_date: "2026-11-07"

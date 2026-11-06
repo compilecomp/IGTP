@@ -1,0 +1,17 @@
+# Statement-fidelity mapping (DEP&CC 2.0, Chapter 19.5).
+result: res.anchors_exist
+formal: IGTP.exists_path_satisfies_anchors
+quantifier_prefix: "A A E γ (for every consistent anchor set there exists a path)"
+audit: "quantifier order verified: ∀ A (with consistency), ∃ γ — the witness is constructed inside the proof, so the existential follows the universal"
+mapping:
+  - prose: "every consistent anchor set"
+    formal: "(A : AnchorSet M) (hcons : AnchorConsistent A)"
+    audit: "matches; consistency = no two distinct points anchored at one time"
+  - prose: "is satisfied by some path"
+    formal: "∃ γ : ℝ → M, ∀ a ∈ A, SatisfiesAnchor γ a"
+    audit: "matches; γ t = anchor witness at t (classical choice) else arbitrary point of the nonempty universe"
+  - prose: "nonempty universe"
+    formal: "[Nonempty M]"
+    audit: "matches; H2"
+signed_by: compilecomp
+review_date: "2026-11-07"

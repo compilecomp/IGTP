@@ -1,0 +1,25 @@
+# Convention manifest (DEP&CC 2.0, Appendix B; every key fixed, "standard" is not a value).
+conv.NN.includes_zero: true
+conv.subset.symbol: "subseteq (non-proper); subsetneq (proper)"
+conv.positive: "> 0 (nonnegative written explicitly)"
+conv.increasing: "non-strict; strictly increasing written explicitly"
+conv.ring: "associative, unital, 1 != 0, commutative unless stated"
+conv.graph: "finite, simple, undirected, loopless; weights are exact nonnegative rationals"
+conv.manifold: "IGTP MetricManifold is a data interface: carrier type, tangent family, real-valued metric and Ricci component functions, diagonal positive semidefiniteness; no topological, bilinearity, or smoothness conditions are implied unless stated"
+conv.measure: "not used in the formal core; any future measure is named at each use"
+conv.integral: "not used in the formal core; the continuous action functional is not defined in this repository"
+conv.Lp: "not used in the formal core"
+conv.log: "natural log; log2 written explicitly; description lengths in bits when stated"
+conv.complexity.model: "word-RAM; input measured by bit length of the serialized instance; deterministic unless stated"
+conv.w.h.p.: "not used; no probabilistic algorithms in this repository"
+conv.category.size: "not used in the formal core"
+conv.empty_sum: 0
+conv.empty_product: 1
+conv.empty_sup: "declared per use; not used in the formal core"
+conv.decimal_rounding: "round-half-even to 3 significant figures for display; exact rationals serialized as 'n' or 'n/d' in artifacts"
+conv.iid: "not used in the formal core"
+conv.ae: "with respect to the measure named at the point of use"
+conv.universe: "no Grothendieck universes; large categories handled by size annotations"
+conv.timeout: "SMT timeouts in milliseconds, declared per invocation, default 10000"
+conv.z3.unknown: "the z3 verdict 'unknown' is never treated as 'unsat' (Chapter 19.8)"
+conv.fractions: "all load-bearing numeric engine values are fractions.Fraction (class: exact, Chapter 18.1); floating-point values are informational only and never load-bearing"

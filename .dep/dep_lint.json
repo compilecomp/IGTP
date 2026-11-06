@@ -1,0 +1,52 @@
+{
+  "fail_on": [0, 1],
+  "version": "0.1.0",
+  "standard_version": "2.0",
+  "doc_scan": {
+    "paths": ["README.md", "doc", "bridges/igtp_engine", "experiments/code"],
+    "extensions": [".md", ".py"]
+  },
+  "exempt_paths": ["standard.md", "doc standard.md", "dep", "tools", "bridges/tests", "bridges/conftest.py", ".dep", ".lake", ".github", ".git"],
+  "lean_scan": ["IGTP.lean", "IGTP"],
+  "banned_tokens_lean": ["sorry", "admit", "native_decide", "axiom ", "unsafe", "partial def"],
+  "banned_phrases": [
+    "clearly", "obviously", "trivially", "evidently", "plainly",
+    "it is easy to see", "one sees immediately", "a standard argument",
+    "by standard techniques", "routine computation", "after some algebra",
+    "it can be shown", "well known", "left to the reader",
+    "exercise for the reader", "similarly", "analogously", "likewise",
+    "the general case follows", "mutatis mutandis",
+    "without loss of generality", "by symmetry", "it suffices to show",
+    "for any", "almost all", "almost every", "generically", "typically",
+    "under mild assumptions", "under suitable conditions",
+    "for appropriate choices", "with the obvious modifications",
+    "canonical", "essentially unique", "the obvious map", "up to constants",
+    "novel", "powerful", "elegant", "beautiful", "remarkable", "striking",
+    "state-of-the-art", "superior", "significantly", "dramatically", "vastly",
+    "revolutionary", "massive", "ultimate", "perfect", "best possible",
+    "ruthless", "seamless", "frictionless", "it is important to note",
+    "in conclusion", "let us dive in"
+  ],
+  "banned_phrase_word_boundaries": ["clearly", "obviously", "trivially", "evidently", "plainly", "similarly", "analogously", "likewise", "canonical", "novel", "powerful", "elegant", "beautiful", "remarkable", "striking", "superior", "dramatically", "vastly", "revolutionary", "massive", "ultimate", "perfect", "seamless", "frictionless", "typically", "generically"],
+  "claim_status_vocabulary": ["machine-checked", "proved", "proved-modulo", "conditional", "verified-numeric", "empirical", "sketched", "conjectural", "heuristic", "retracted"],
+  "completeness_vocabulary": ["complete", "partial", "sketch", "gap-declared", "placeholder", "retracted"],
+  "complete_ok_statuses": ["machine-checked", "proved", "verified-numeric"],
+  "required_claim_fields": ["id", "statement", "claim_status", "completeness", "depends", "evidence", "gap", "owner"],
+  "required_result_fields": ["id", "node", "type", "statement", "claim_status", "completeness", "class", "hyp", "quantifiers", "depends", "axioms", "witness", "sharpness", "degeneracy", "fidelity", "evidence", "gap", "owner", "review"],
+  "machine_checked_evidence_required": ["fidelity", "degeneracy", "axioms"],
+  "rules": [
+    "DEP-LINT-ADMITTED",
+    "DEP-LINT-BANNED-PHRASE",
+    "DEP-LINT-STATUS-VALUE",
+    "DEP-LINT-STATUS-CONTAMINATION",
+    "DEP-LINT-BLOCK",
+    "DEP-LINT-HYP-DECLARED",
+    "DEP-LINT-FIDELITY",
+    "DEP-LINT-DEGENERACY",
+    "DEP-LINT-AXIOM-DRIFT",
+    "DEP-LINT-GAP-EXPIRY",
+    "DEP-LINT-DOC-SYNC",
+    "DEP-LINT-DOCSTRINGS",
+    "DEP-LINT-RESULTS-TABLE"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "result": "IGTP.naturalGradientStep_descent_strict"
+}

@@ -1,0 +1,85 @@
+{
+  "node": "IGTP.isRicciFlow_const",
+  "hypothesis_count": 0,
+  "quota": 8,
+  "probes": [
+    {
+      "id": "dg.ricci.00",
+      "instantiation": "constant metric family, ricci = 0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.ricci.01",
+      "instantiation": "constant metric family, ricci = 1",
+      "hyps_hold": true,
+      "conclusion_holds": false,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.ricci.02",
+      "instantiation": "constant metric family, ricci = 1/2",
+      "hyps_hold": true,
+      "conclusion_holds": false,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.ricci.03",
+      "instantiation": "constant metric family, ricci = -3",
+      "hyps_hold": true,
+      "conclusion_holds": false,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.ricci.04",
+      "instantiation": "constant metric family, ricci = 1/101",
+      "hyps_hold": true,
+      "conclusion_holds": false,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.ricci.05",
+      "instantiation": "constant metric family, ricci = 2",
+      "hyps_hold": true,
+      "conclusion_holds": false,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.ricci.06",
+      "instantiation": "constant metric family, ricci = -1/2",
+      "hyps_hold": true,
+      "conclusion_holds": false,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.ricci.07",
+      "instantiation": "constant metric family, ricci = 7",
+      "hyps_hold": true,
+      "conclusion_holds": false,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.ricci.08",
+      "instantiation": "constant metric family, ricci = 1/7",
+      "hyps_hold": true,
+      "conclusion_holds": false,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.ricci.05",
+      "instantiation": "time-varying family (deriv nonzero): outside the constant-family statement of the theorem",
+      "hyps_hold": false,
+      "conclusion_holds": false,
+      "verdict": "n/a: theorem quantifies over time-constant families"
+    }
+  ],
+  "summary": {
+    "applicable": 9,
+    "executed": 9,
+    "passes": 9,
+    "counterexamples": 0,
+    "na": 1,
+    "quota_met": true
+  }
+}

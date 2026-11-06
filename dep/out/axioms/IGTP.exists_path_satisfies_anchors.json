@@ -1,0 +1,8 @@
+{
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "result": "IGTP.exists_path_satisfies_anchors"
+}

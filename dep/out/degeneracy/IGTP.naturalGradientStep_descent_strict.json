@@ -1,0 +1,260 @@
+{
+  "node": "IGTP.naturalGradientStep_descent_strict",
+  "hypothesis_count": 5,
+  "quota": 28,
+  "probes": [
+    {
+      "id": "dg.naturalGradientStep_descent_strict.001",
+      "instantiation": "c=1, f=1, eta=1/4, theta=-1: S=1/2, S'=9/32",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.002",
+      "instantiation": "c=1, f=1, eta=1/4, theta=1: S=1/2, S'=9/32",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.003",
+      "instantiation": "c=1, f=1, eta=1/2, theta=-1: S=1/2, S'=1/8",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.004",
+      "instantiation": "c=1, f=1, eta=1/2, theta=1: S=1/2, S'=1/8",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.005",
+      "instantiation": "c=1, f=1, eta=1, theta=-1: S=1/2, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.006",
+      "instantiation": "c=1, f=1, eta=1, theta=1: S=1/2, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.007",
+      "instantiation": "c=1, f=1, eta=2, theta=-1: S=1/2, S'=1/2",
+      "hyps_hold": false,
+      "conclusion_holds": false,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.008",
+      "instantiation": "c=1, f=1, eta=2, theta=1: S=1/2, S'=1/2",
+      "hyps_hold": false,
+      "conclusion_holds": false,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.009",
+      "instantiation": "c=1, f=2, eta=1/4, theta=-1: S=1/2, S'=49/128",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.010",
+      "instantiation": "c=1, f=2, eta=1/4, theta=1: S=1/2, S'=49/128",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.011",
+      "instantiation": "c=1, f=2, eta=1/2, theta=-1: S=1/2, S'=9/32",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.012",
+      "instantiation": "c=1, f=2, eta=1/2, theta=1: S=1/2, S'=9/32",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.013",
+      "instantiation": "c=1, f=2, eta=1, theta=-1: S=1/2, S'=1/8",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.014",
+      "instantiation": "c=1, f=2, eta=1, theta=1: S=1/2, S'=1/8",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.015",
+      "instantiation": "c=1, f=2, eta=2, theta=-1: S=1/2, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.016",
+      "instantiation": "c=1, f=2, eta=2, theta=1: S=1/2, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.017",
+      "instantiation": "c=1/2, f=1, eta=1/4, theta=-1: S=1/4, S'=49/256",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.018",
+      "instantiation": "c=1/2, f=1, eta=1/4, theta=1: S=1/4, S'=49/256",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.019",
+      "instantiation": "c=1/2, f=1, eta=1/2, theta=-1: S=1/4, S'=9/64",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.020",
+      "instantiation": "c=1/2, f=1, eta=1/2, theta=1: S=1/4, S'=9/64",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.021",
+      "instantiation": "c=1/2, f=1, eta=1, theta=-1: S=1/4, S'=1/16",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.022",
+      "instantiation": "c=1/2, f=1, eta=1, theta=1: S=1/4, S'=1/16",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.023",
+      "instantiation": "c=1/2, f=1, eta=2, theta=-1: S=1/4, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.024",
+      "instantiation": "c=1/2, f=1, eta=2, theta=1: S=1/4, S'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.025",
+      "instantiation": "c=1/2, f=2, eta=1/4, theta=-1: S=1/4, S'=225/1024",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.026",
+      "instantiation": "c=1/2, f=2, eta=1/4, theta=1: S=1/4, S'=225/1024",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.027",
+      "instantiation": "c=1/2, f=2, eta=1/2, theta=-1: S=1/4, S'=49/256",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.028",
+      "instantiation": "c=1/2, f=2, eta=1/2, theta=1: S=1/4, S'=49/256",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.029",
+      "instantiation": "c=1/2, f=2, eta=1, theta=-1: S=1/4, S'=9/64",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.030",
+      "instantiation": "c=1/2, f=2, eta=1, theta=1: S=1/4, S'=9/64",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.031",
+      "instantiation": "c=1/2, f=2, eta=2, theta=-1: S=1/4, S'=1/16",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.032",
+      "instantiation": "c=1/2, f=2, eta=2, theta=1: S=1/4, S'=1/16",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.sharp",
+      "instantiation": "step-size violated (eta*c=3 > 2*f=2): c=1, f=1, eta=3, theta=1; S=1/2, S'=2",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: sharpness witness of hstep)"
+    },
+    {
+      "id": "dg.naturalGradientStep_descent_strict.zero",
+      "instantiation": "theta = 0 (minimizer): S'=S'=0; strict conclusion false, non-strict conclusion true",
+      "hyps_hold": true,
+      "conclusion_holds": false,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.natural_gradient.step_def",
+      "instantiation": "step definition: theta' = theta - eta*grad(theta)/f at eta=1, f=1, grad=c*theta, c=1, theta=1 gives theta'=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    }
+  ],
+  "summary": {
+    "applicable": 35,
+    "executed": 35,
+    "passes": 35,
+    "counterexamples": 0,
+    "na": 0,
+    "quota_met": true
+  }
+}

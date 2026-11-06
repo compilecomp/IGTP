@@ -1,0 +1,74 @@
+{
+  "IGTP.discreteAction_nonneg": {
+    "applicable": 16,
+    "counterexamples": 0,
+    "executed": 16,
+    "na": 0,
+    "passes": 16,
+    "quota": 20,
+    "quota_met": true
+  },
+  "IGTP.exists_path_satisfies_anchors": {
+    "applicable": 17,
+    "counterexamples": 0,
+    "executed": 17,
+    "na": 1,
+    "passes": 17,
+    "quota": 16,
+    "quota_met": true
+  },
+  "IGTP.geodesicEnergy_nonneg": {
+    "applicable": 7,
+    "counterexamples": 0,
+    "executed": 7,
+    "na": 0,
+    "passes": 7,
+    "quota": 12,
+    "quota_met": true
+  },
+  "IGTP.isRicciFlow_const": {
+    "applicable": 9,
+    "counterexamples": 0,
+    "executed": 9,
+    "na": 1,
+    "passes": 9,
+    "quota": 8,
+    "quota_met": true
+  },
+  "IGTP.naturalGradientStep_descent_strict": {
+    "applicable": 35,
+    "counterexamples": 0,
+    "executed": 35,
+    "na": 0,
+    "passes": 35,
+    "quota": 28,
+    "quota_met": true
+  },
+  "IGTP.quadratic_descent_le": {
+    "applicable": 82,
+    "counterexamples": 0,
+    "executed": 82,
+    "na": 0,
+    "passes": 82,
+    "quota": 24,
+    "quota_met": true
+  },
+  "IGTP.quadratic_descent_strict": {
+    "applicable": 66,
+    "counterexamples": 0,
+    "executed": 66,
+    "na": 0,
+    "passes": 66,
+    "quota": 28,
+    "quota_met": true
+  },
+  "IGTP.satisfiesAnchor_congr": {
+    "applicable": 15,
+    "counterexamples": 0,
+    "executed": 15,
+    "na": 0,
+    "passes": 15,
+    "quota": 16,
+    "quota_met": true
+  }
+}

@@ -1,0 +1,14 @@
+# Statement-fidelity mapping (DEP&CC 2.0, Chapter 19.5).
+result: res.descent_le
+formal: IGTP.quadratic_descent_le
+quantifier_prefix: "A c A f A η A θ (domains: ℝ, with 0 < c, 0 < f, 0 ≤ η, η c ≤ f)"
+audit: "quantifier order verified; θ unrestricted including the minimizer 0"
+mapping:
+  - prose: "never increases the objective"
+    formal: "(c / 2) * (θ - η * (c * θ) / f) ^ 2 ≤ (c / 2) * θ ^ 2"
+    audit: "matches; non-strict ≤, equality at θ = 0"
+  - prose: "for every θ"
+    formal: "θ : ℝ, no constraint"
+    audit: "matches"
+signed_by: compilecomp
+review_date: "2026-11-07"

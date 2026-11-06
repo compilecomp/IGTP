@@ -1,0 +1,6 @@
+# Interchange ledger (DEP&CC 2.0, Chapter 13.1; Law 5).
+# Status: EMPTY. The formal core and the engine contain no interchange of two
+# limiting operations: no limits, no infinite sums or integrals occur in any
+# load-bearing statement. Every future interchange must be registered here
+# with a named theorem and discharged preconditions before use.
+interchanges: []

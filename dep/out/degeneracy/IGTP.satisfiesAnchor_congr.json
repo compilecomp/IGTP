@@ -1,0 +1,120 @@
+{
+  "node": "IGTP.satisfiesAnchor_congr",
+  "hypothesis_count": 2,
+  "quota": 16,
+  "probes": [
+    {
+      "id": "dg.congr.00",
+      "instantiation": "gamma(t)=1, sigma(t)=1, anchor p=1",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.congr.01",
+      "instantiation": "gamma(t)=1, sigma(t)=2, anchor p=1",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.congr.02",
+      "instantiation": "gamma(t)=0, sigma(t)=0, anchor p=0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.congr.03",
+      "instantiation": "gamma(t)=3, sigma(t)=3, anchor p=1/2",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.congr.04",
+      "instantiation": "gamma(t)=1/2, sigma(t)=1/2, anchor p=1/2",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.congr.05",
+      "instantiation": "gamma(t)=-1, sigma(t)=-1, anchor p=-1",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.congr.06",
+      "instantiation": "gamma(t)=0, sigma(t)=1, anchor p=0",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.congr.07",
+      "instantiation": "gamma(t)=2, sigma(t)=2, anchor p=3",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.congr.08",
+      "instantiation": "gamma(t)=1/3, sigma(t)=2/3, anchor p=1/3",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.congr.09",
+      "instantiation": "gamma(t)=101, sigma(t)=101, anchor p=101",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.congr.10",
+      "instantiation": "gamma(t)=-1/4, sigma(t)=-1/4, anchor p=-1/2",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.congr.11",
+      "instantiation": "gamma(t)=1, sigma(t)=1, anchor p=0",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.congr.12",
+      "instantiation": "agreement fails (sigma(t) != gamma(t)): hypothesis h false",
+      "hyps_hold": false,
+      "conclusion_holds": false,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.congr.13",
+      "instantiation": "anchor fails (gamma(t) != p): hypothesis hgamma false",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.congr.14",
+      "instantiation": "agreement and anchor both hold; p arbitrary point",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    }
+  ],
+  "summary": {
+    "applicable": 15,
+    "executed": 15,
+    "passes": 15,
+    "counterexamples": 0,
+    "na": 0,
+    "quota_met": true
+  }
+}

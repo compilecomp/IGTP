@@ -1,0 +1,46 @@
+{
+  "lean_toolchain": "leanprover/lean4:4.14.0",
+  "mathlib_commit": "4bbdccd9c5f862bf90ff12f0a9e2c8be032b9a84",
+  "results": {
+    "IGTP.discreteAction_nonneg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "IGTP.exists_path_satisfies_anchors": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "IGTP.geodesicEnergy_nonneg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "IGTP.isRicciFlow_const": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "IGTP.naturalGradientStep_descent_strict": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "IGTP.quadratic_descent_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "IGTP.quadratic_descent_strict": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "IGTP.satisfiesAnchor_congr": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  }
+}

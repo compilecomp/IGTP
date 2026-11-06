@@ -1,0 +1,127 @@
+{
+  "node": "IGTP.discreteAction_nonneg",
+  "hypothesis_count": 3,
+  "quota": 20,
+  "probes": [
+    {
+      "id": "dg.action.00",
+      "instantiation": "empty time list: components nonnegative; action = 0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.action.01",
+      "instantiation": "single time t=1: components nonnegative; action = 5/2",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.action.02",
+      "instantiation": "two times: components nonnegative; action = 155/24",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.action.03",
+      "instantiation": "t=0 boundary: components nonnegative; action = 0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.action.04",
+      "instantiation": "large times: components nonnegative; action = 12707/2",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.action.05",
+      "instantiation": "negative times (squared energy): components nonnegative; action = 9",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.action.06",
+      "instantiation": "duplicate times: components nonnegative; action = 2",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.action.07",
+      "instantiation": "equality case: all components zero at t=0: components nonnegative; action = 0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.action.08",
+      "instantiation": "large potential: components nonnegative; action = 2000001/2",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.action.09",
+      "instantiation": "large description: components nonnegative; action = 2000001/2",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.action.10",
+      "instantiation": "tiny fractional times: components nonnegative; action = 4014167/1499547",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.action.11",
+      "instantiation": "mixed signs of time: components nonnegative; action = 109/10",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.action.12",
+      "instantiation": "three times: components nonnegative; action = 169/12",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.action.13",
+      "instantiation": "all-zero potential and description: components nonnegative; action = 10",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.action.14",
+      "instantiation": "smtPotential = -2 at t=1 (violates smt_nonneg)",
+      "hyps_hold": false,
+      "conclusion_holds": false,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.action.15",
+      "instantiation": "descriptionLength = -1/2 at t=1 (violates dl_nonneg)",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    }
+  ],
+  "summary": {
+    "applicable": 16,
+    "executed": 16,
+    "passes": 16,
+    "counterexamples": 0,
+    "na": 0,
+    "quota_met": true
+  }
+}

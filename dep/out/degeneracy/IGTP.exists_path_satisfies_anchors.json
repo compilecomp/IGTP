@@ -1,0 +1,141 @@
+{
+  "node": "IGTP.exists_path_satisfies_anchors",
+  "hypothesis_count": 2,
+  "quota": 16,
+  "probes": [
+    {
+      "id": "dg.anchors.00",
+      "instantiation": "anchor set []: consistent=True, path={0: 0, 1: 0, 2: 0}",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.anchors.01",
+      "instantiation": "anchor set [(0, 0)]: consistent=True, path={0: 0, 1: 0, 2: 0}",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.anchors.02",
+      "instantiation": "anchor set [(0, 0), (1, 0)]: consistent=True, path={0: 0, 1: 0, 2: 0}",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.anchors.03",
+      "instantiation": "anchor set [(0, 0), (1, 1)]: consistent=True, path={0: 0, 1: 1, 2: 0}",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.anchors.04",
+      "instantiation": "anchor set [(0, 0), (0, 1)]: consistent=False, path={0: 0, 1: 0, 2: 0}",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.anchors.05",
+      "instantiation": "anchor set [(0, 0), (1, 1), (2, 0)]: consistent=True, path={0: 0, 1: 1, 2: 0}",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.anchors.06",
+      "instantiation": "anchor set [(1, 1), (1, 0)]: consistent=False, path={0: 0, 1: 1, 2: 0}",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.anchors.07",
+      "instantiation": "anchor set [(0, 0), (1, 0), (2, 1)]: consistent=True, path={0: 0, 1: 0, 2: 1}",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.anchors.08",
+      "instantiation": "anchor set [(2, 0)]: consistent=True, path={0: 0, 1: 0, 2: 0}",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.anchors.09",
+      "instantiation": "anchor set [(2, 1)]: consistent=True, path={0: 0, 1: 0, 2: 1}",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.anchors.10",
+      "instantiation": "anchor set [(0, 1), (2, 1)]: consistent=True, path={0: 1, 1: 0, 2: 1}",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.anchors.11",
+      "instantiation": "anchor set [(0, 0), (1, 0), (2, 0)]: consistent=True, path={0: 0, 1: 0, 2: 0}",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.anchors.12",
+      "instantiation": "anchor set [(0, 1), (1, 1), (2, 1)]: consistent=True, path={0: 1, 1: 1, 2: 1}",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.anchors.13",
+      "instantiation": "anchor set [(0, 0), (1, 1), (2, 1)]: consistent=True, path={0: 0, 1: 1, 2: 1}",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.anchors.14",
+      "instantiation": "anchor set [(0, 1), (1, 0), (2, 0)]: consistent=True, path={0: 1, 1: 0, 2: 0}",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.anchors.15",
+      "instantiation": "anchor set [(1, 0), (2, 0), (2, 1)]: consistent=False, path={0: 0, 1: 0, 2: 0}",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.anchors.16",
+      "instantiation": "anchor set [(0, 0), (0, 1), (1, 0)]: consistent=False, path={0: 0, 1: 0, 2: 0}",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.anchors.08",
+      "instantiation": "empty point universe (Nonempty M fails): outside the probe universe; theorem assumes [Nonempty M]",
+      "hyps_hold": false,
+      "conclusion_holds": false,
+      "verdict": "n/a: hypothesis Nonempty M excluded in this probe"
+    }
+  ],
+  "summary": {
+    "applicable": 17,
+    "executed": 17,
+    "passes": 17,
+    "counterexamples": 0,
+    "na": 1,
+    "quota_met": true
+  }
+}

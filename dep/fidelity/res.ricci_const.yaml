@@ -1,0 +1,17 @@
+# Statement-fidelity mapping (DEP&CC 2.0, Chapter 19.5).
+result: res.ricci_const
+formal: IGTP.isRicciFlow_const
+quantifier_prefix: "A g (iff) A p A u A v"
+audit: "the iff is proved in both directions; no hypotheses"
+mapping:
+  - prose: "a time-constant metric family"
+    formal: "IsRicciFlow (fun _ p => g p)"
+    audit: "matches; the family ignores its time argument"
+  - prose: "satisfies the Ricci-flow equation ∂_t g = -2 R"
+    formal: "IsRicciFlowAt g t p u v = (deriv (fun s => g s p u v) t = -2 * ricci p u v)"
+    audit: "matches; R is the declared ricci data, not a tensor derived from g (Known Limitations in doc/RicciFlow.md)"
+  - prose: "if and only if the Ricci data vanishes identically"
+    formal: "∀ (p : M) (u v : Tangent p), ricci p u v = 0"
+    audit: "matches; both directions kernel-checked"
+signed_by: compilecomp
+review_date: "2026-11-07"

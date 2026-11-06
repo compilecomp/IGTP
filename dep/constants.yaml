@@ -1,0 +1,57 @@
+# Constants ledger (DEP&CC 2.0, Chapter 12.1; Law 6: no unnamed constants).
+- id: const.eta
+  glyph: "η"
+  value_kind: symbolic
+  depends_on: []
+  sign: "positive in res.descent_strict; nonnegative in res.descent_le"
+  finite: proved
+  scope: "IGTP/QuadraticModel.lean"
+  reuse_policy: unique
+  notes: "step size; constrained by hstep: eta * c <= f"
+- id: const.c
+  glyph: "c"
+  value_kind: symbolic
+  depends_on: []
+  sign: positive
+  finite: proved
+  scope: "IGTP/QuadraticModel.lean"
+  reuse_policy: unique
+  notes: "curvature of the quadratic model objective S(theta) = (c/2) theta^2"
+- id: const.f
+  glyph: "f"
+  value_kind: symbolic
+  depends_on: []
+  sign: positive
+  finite: proved
+  scope: "IGTP/QuadraticModel.lean"
+  reuse_policy: unique
+  notes: "Fisher-metric scalar; division by f requires 0 < f"
+- id: const.timeout_ms
+  glyph: "timeout_ms"
+  value_kind: "numeric, default 10000"
+  depends_on: []
+  sign: positive
+  finite: declared
+  scope: "bridges/igtp_engine/smt_bridge.py"
+  reuse_policy: unique
+  effective: true
+  notes: "declared finite SMT timeout in milliseconds (Chapter 19.8); every invocation must pass a positive value"
+- id: const.max_clauses
+  glyph: "max_clauses"
+  value_kind: "numeric, default 3^n over occurring variables"
+  depends_on: [nvars]
+  sign: positive
+  finite: declared
+  scope: "bridges/igtp_engine/resolution.py"
+  reuse_policy: unique
+  effective: true
+  notes: "declared termination bound of propositional saturation; exceeded bound raises RuntimeError"
+- id: const.demo_weights
+  glyph: "w(e)"
+  value_kind: "exact rationals declared in code"
+  depends_on: [pipeline.build_demo_graph]
+  sign: nonnegative
+  finite: declared
+  scope: "bridges/igtp_engine/pipeline.py"
+  reuse_policy: unique
+  notes: "metric weights of the demo manifold; exact Fractions, serialized as 'n' or 'n/d'"

@@ -1,0 +1,32 @@
+# Axiom ledger (DEP&CC 2.0, Chapters 19.2, 20; Law 4: no silent axioms).
+# The machine-extracted sets live in dep/out/axioms/ (one file per result)
+# and dep/out/axioms.json (merged). CI re-extracts and fails on drift
+# (Rule DEP-LINT-AXIOM-DRIFT).
+#
+# This repository declares zero `axiom` commands in Lean. Every result
+# depends only on the standard Mathlib axioms, enumerated explicitly per
+# Chapter 19.2 (never omitted as "standard"):
+standard_axioms:
+  - {name: propext, justification: "propositional extensionality, Mathlib default"}
+  - {name: Classical.choice, justification: "classical choice, Mathlib default; used by the anchor-existence construction and by Mathlib lemmas"}
+  - {name: Quot.sound, justification: "quotient soundness, Mathlib default"}
+
+per_result:
+  IGTP.geodesicEnergy_nonneg: [propext, Classical.choice, Quot.sound]
+  IGTP.discreteAction_nonneg: [propext, Classical.choice, Quot.sound]
+  IGTP.isRicciFlow_const: [propext, Classical.choice, Quot.sound]
+  IGTP.quadratic_descent_strict: [propext, Classical.choice, Quot.sound]
+  IGTP.quadratic_descent_le: [propext, Classical.choice, Quot.sound]
+  IGTP.naturalGradientStep_descent_strict: [propext, Classical.choice, Quot.sound]
+  IGTP.exists_path_satisfies_anchors: [propext, Classical.choice, Quot.sound]
+  IGTP.satisfiesAnchor_congr: [propext, Classical.choice, Quot.sound]
+
+choice_classification:
+  - {use: "IGTP.exists_path_satisfies_anchors (selection of anchor witnesses)", strength: "finite choice over the anchor set plus Classical.arbitrary for unanchored times; Classical.choice"}
+  - {use: "all other results", strength: "none beyond Mathlib defaults"}
+
+tcb:
+  - {entry: "Lean 4 kernel and elaborator, version 4.14.0", owner: compilecomp, justification: "kernel checking of all IGTP declarations"}
+  - {entry: "Mathlib @ 4bbdccd9c5f862bf90ff12f0a9e2c8be032b9a84", owner: compilecomp, justification: "pinned dependency of every module"}
+  - {entry: "z3 4.13.0 (unsat verdicts)", owner: compilecomp, justification: "cross-check only; no claim in dep/claims.yaml rests on z3 verdicts alone (Chapter 19.8)"}
+  - {entry: "CPython 3.12 stdlib fractions (exact arithmetic)", owner: compilecomp, justification: "exact rational arithmetic in the engine and battery; class `exact` per Chapter 18.1"}

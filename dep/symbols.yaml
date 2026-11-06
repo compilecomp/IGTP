@@ -1,0 +1,103 @@
+# Symbol registry (DEP&CC 2.0, Chapter 7.1). One glyph, one meaning per scope.
+- id: sym.M
+  glyph: M
+  sort: "Type (carrier of the IGTP state space)"
+  kind: type
+  scope: global
+  declared_at: "IGTP/Manifold.lean (class MetricManifold M)"
+- id: sym.Tangent
+  glyph: "T_p"
+  sort: "Type (tangent space at p)"
+  kind: type-family
+  scope: global
+  declared_at: "IGTP/Manifold.lean (MetricManifold.Tangent)"
+- id: sym.g
+  glyph: "g_p(u, v)"
+  sort: "Real (metric-tensor component function)"
+  kind: data
+  scope: global
+  declared_at: "IGTP/Manifold.lean (MetricManifold.metric)"
+- id: sym.R
+  glyph: "R_p(u, v)"
+  sort: "Real (Ricci-tensor component function, declared data)"
+  kind: data
+  scope: global
+  declared_at: "IGTP/Manifold.lean (MetricManifold.ricci)"
+- id: sym.gamma
+  glyph: "γ"
+  sort: "function ℝ → M (proof path)"
+  kind: variable
+  scope: global
+  declared_at: "IGTP/Manifold.lean (PathVelocity)"
+- id: sym.v
+  glyph: "v"
+  sort: "velocity assignment (∀ t, Tangent (γ t)); declared data"
+  kind: variable
+  scope: global
+  declared_at: "IGTP/Manifold.lean (PathVelocity)"
+- id: sym.E
+  glyph: "E(γ, v, t)"
+  sort: "Real (geodesic energy density, (1/2) g(v(t), v(t)))"
+  kind: definition
+  scope: global
+  declared_at: "IGTP/Manifold.lean (geodesicEnergy)"
+- id: sym.V
+  glyph: "V(γ, t)"
+  sort: "Real (constraint potential, SMT component; nonnegative by hypothesis)"
+  kind: data
+  scope: global
+  declared_at: "IGTP/Objective.lean (ObjectiveComponents.smtPotential)"
+- id: sym.K
+  glyph: "K(γ, t)"
+  sort: "Real (description-length regularizer, ITP component; declared proxy, nonnegative by hypothesis)"
+  kind: data
+  scope: global
+  declared_at: "IGTP/Objective.lean (ObjectiveComponents.descriptionLength)"
+- id: sym.S_disc
+  glyph: "S(γ, ts)"
+  sort: "Real (discrete action over a finite time list)"
+  kind: definition
+  scope: global
+  declared_at: "IGTP/Objective.lean (discreteAction)"
+- id: sym.g_family
+  glyph: "g_s"
+  sort: "time-dependent metric component family ℝ → ∀ p, Tangent p → Tangent p → ℝ"
+  kind: variable
+  scope: global
+  declared_at: "IGTP/RicciFlow.lean (MetricFamily)"
+- id: sym.S_theta
+  glyph: "S(θ)"
+  sort: "Real function, quadratic model (c/2) θ^2"
+  kind: variable
+  scope: "IGTP/QuadraticModel.lean"
+  declared_at: "IGTP/QuadraticModel.lean (quadratic_descent_strict)"
+- id: sym.theta
+  glyph: "θ"
+  sort: "Real (scalar parameter)"
+  kind: variable
+  scope: "IGTP/QuadraticModel.lean"
+  declared_at: "IGTP/QuadraticModel.lean (naturalGradientStep)"
+- id: sym.eta
+  glyph: "η"
+  sort: "Real (step size; positive)"
+  kind: constant
+  scope: "IGTP/QuadraticModel.lean"
+  declared_at: "IGTP/QuadraticModel.lean (naturalGradientStep)"
+- id: sym.c
+  glyph: "c"
+  sort: "Real, positive (model curvature of the quadratic objective)"
+  kind: constant
+  scope: "IGTP/QuadraticModel.lean"
+  declared_at: "IGTP/QuadraticModel.lean (quadratic_descent_strict)"
+- id: sym.f
+  glyph: "f"
+  sort: "Real, positive (Fisher-metric scalar)"
+  kind: constant
+  scope: "IGTP/QuadraticModel.lean"
+  declared_at: "IGTP/QuadraticModel.lean (naturalGradientStep)"
+- id: sym.A
+  glyph: "A"
+  sort: "AnchorSet M = Set (ℝ × M) (Dirichlet anchors)"
+  kind: variable
+  scope: "IGTP/Boundary.lean"
+  declared_at: "IGTP/Boundary.lean (AnchorSet)"

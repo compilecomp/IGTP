@@ -1,0 +1,8 @@
+# Lean build artifacts and fetched dependencies (pinned in lakefile.lean;
+# rebuilt deterministically via lake build)
+/.lake/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/

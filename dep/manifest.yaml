@@ -1,0 +1,30 @@
+# IGTP repository manifest (DEP&CC 2.0, Appendix J; Documentation Style Guide).
+standard: "DEP&CC 2.0"
+profile: "Core"
+doc_standard: "Documentation Style Guide (doc standard.md)"
+owner: "compilecomp"
+revision_history:
+  - {version: "0.1.0", date: "2026-11-07", change: "initial compliant build: formal core, bridges, ledgers, lint, CI"}
+
+# Appendix J requires a dated full-conformance plan; Core is not a resting place.
+full_conformance_plan:
+  symbol_registry_completion: "2026-12-15"
+  readability_metrics_R01-R24_tooling: "2027-01-31"
+  independent_cold_reads_DEP-0: "2027-03-31"
+  full_annotation_automation: "2027-05-01"
+
+# Declared adaptations of the Documentation Style Guide (Chapter 3.3 says
+# "Include Rust struct/enum signatures"; this repository is Lean 4 + Python,
+# so the Formal Definitions sections carry Lean 4 and Python signatures in
+# the implementation language of the documented component).
+doc_standard_adaptations:
+  - rule: "3.3 Formal Definitions"
+    adaptation: "Lean 4 class/structure/def signatures and Python dataclass signatures replace Rust struct/enum signatures"
+  - rule: "5 Maintenance 2 (cargo doc CI)"
+    adaptation: "CI runs lake build, tools/dep_lint (docstring coverage for every public Lean declaration), and the Python test suite instead of cargo doc"
+
+conformance_scope:
+  - "Lean 4 formal core (IGTP/, all declarations proved, zero admitted tokens)"
+  - "Python reference engine (bridges/, empirical status)"
+  - "Repository documentation (doc/, README.md)"
+  - "Not in scope: typeset LaTeX paper (no paper exists in this repository yet)"

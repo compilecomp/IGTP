@@ -1,0 +1,14 @@
+# Statement-fidelity mapping (DEP&CC 2.0, Chapter 19.5).
+result: res.descent_step
+formal: IGTP.naturalGradientStep_descent_strict
+quantifier_prefix: "A c A f A η A θ (as res.descent_strict)"
+audit: "quantifier order matches res.descent_strict; the conclusion is transferred by definitional unfolding"
+mapping:
+  - prose: "the IGTP natural-gradient update"
+    formal: "naturalGradientStep η f (fun x => c * x) θ = θ - η * (c * θ) / f"
+    audit: "matches; simp only [naturalGradientStep] transfers the closed-form theorem"
+  - prose: "with the model gradient ∇S(θ) = c θ"
+    formal: "grad := fun x => c * x"
+    audit: "matches; the gradient is supplied explicitly, no calculus is invoked"
+signed_by: compilecomp
+review_date: "2026-11-07"

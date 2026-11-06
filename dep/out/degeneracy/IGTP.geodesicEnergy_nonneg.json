@@ -1,0 +1,64 @@
+{
+  "node": "IGTP.geodesicEnergy_nonneg",
+  "hypothesis_count": 1,
+  "quota": 12,
+  "probes": [
+    {
+      "id": "dg.energy.00",
+      "instantiation": "M = Unit, v = 0, g(v,v) = 0^2 = 0",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.energy.01",
+      "instantiation": "M = Unit, v = 1, g(v,v) = 1^2 = 1",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.energy.02",
+      "instantiation": "M = Unit, v = 1/2, g(v,v) = 1/2^2 = 1/4",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.energy.03",
+      "instantiation": "M = Unit, v = 101, g(v,v) = 101^2 = 10201",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.energy.04",
+      "instantiation": "M = Unit, v = 1/101, g(v,v) = 1/101^2 = 1/10201",
+      "hyps_hold": true,
+      "conclusion_holds": true,
+      "verdict": "passes"
+    },
+    {
+      "id": "dg.energy.05",
+      "instantiation": "M = Unit, v = -1, g(v,v) = -1^2 = 1",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    },
+    {
+      "id": "dg.energy.06",
+      "instantiation": "M = Unit, v = -1/4, g(v,v) = -1/4^2 = 1/16",
+      "hyps_hold": false,
+      "conclusion_holds": true,
+      "verdict": "passes (hypothesis false: vacuous)"
+    }
+  ],
+  "summary": {
+    "applicable": 7,
+    "executed": 7,
+    "passes": 7,
+    "counterexamples": 0,
+    "na": 0,
+    "quota_met": true
+  }
+}
